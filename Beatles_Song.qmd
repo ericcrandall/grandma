@@ -16,10 +16,15 @@ format:
 
 ## From Nothing's Gonna Change Our World
 
+<<<<<<< HEAD
 When I find myself in times of trouble,
 Mother Mary comes to me.
 Speaking words of wisdom.
 Let it be.
+=======
+In the town where I was born, lived a man who sailed to sea
+And he told us of his life in the yellow submarine.
+>>>>>>> 6dc0994ba6d20c61ddd0e4934bfc08fbfaea12fa
 
 (Chord Chord Chord)
 
