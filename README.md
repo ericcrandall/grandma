@@ -1,1 +1,2 @@
-# grandma got run over by a reindeer
+# Some silly examples of what can be done with markdown and quarto notebooks
+Just for practice!
