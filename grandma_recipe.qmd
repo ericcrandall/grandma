@@ -20,6 +20,7 @@ format:
 #| code-fold: true
 #| message: false
 library(tidyverse)
+library(knitr)
 ```
 
 # Prelude
@@ -75,8 +76,10 @@ must be some way to make that image smaller.
 **With Quarto, there is a way**
 ```
 ![A pic of grandma](figures/Warthog4.jpg){width=50%}
-![A pic of grandma](figures/Warthog4.jpg){width=2 in}
+![A pic of grandma](figures/Warthog4.jpg){width=2in}
 ```
+
+![A pic of grandma](figures/Warthog4.jpg){width=2in}
 
 We might come back to this [Dedication](#tag-it) at some point,
 so we have linked it to a tag.  Note that it does not seem
@@ -114,12 +117,13 @@ Notice, the indent level is 4 spaces.  You can use a
 `-` or a `*` or a `+` to start those list items. In
 fact, you can mix and match them too, as I did, but it
 is probably better to be consistent. (Use the same symbol
-within a nested level and different ones between).  Hey!
-did you notice the backticks (upper left of your keyboard---
+within a nested level and different ones between).  
+
+Hey! did you notice the backticks (upper left of your keyboard---
 same key as the tilde) around things.  Those include 
 inline code-fragments---basically they get printed
 out in monospaced type (any maybe in a different
-color).  Super useful for variable names like
+color).  Super useful for variable names or functions like
 `x_data` or `y_data`.
 
 While we are at it, let's look at what I have done with
@@ -135,6 +139,7 @@ paragraph break.
 
 
 ### Static table version {#static-table-list}
+
 We could also have written that stuff out in a table.
 There are actually lots of ways to write tables.  See
 [this link](http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html#tables).
@@ -222,7 +227,7 @@ And then we print it and it looks like this. (Check out how I hid that code bloc
 
 ```{r}
 #| echo: false
-tab
+kable(tab)
 ```
 
 Cooking times, $M$, at various temperatures, $T$, and elevations, $a$.

@@ -214,7 +214,8 @@ div.csl-indent {
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
@@ -250,7 +251,13 @@ But you can stay immature forever<br>
 <p><strong>Holy Oversized Image Batman</strong>! You have got to be kidding me! There must be some way to make that image smaller.</p>
 <p><strong>With Quarto, there is a way</strong></p>
 <pre><code>![A pic of grandma](figures/Warthog4.jpg){width=50%}
-![A pic of grandma](figures/Warthog4.jpg){width=2 in}</code></pre>
+![A pic of grandma](figures/Warthog4.jpg){width=2in}</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/Warthog4.jpg" class="img-fluid figure-img" style="width:2in"></p>
+<p></p><figcaption class="figure-caption">A pic of grandma</figcaption><p></p>
+</figure>
+</div>
 <p>We might come back to this <a href="#tag-it">Dedication</a> at some point, so we have linked it to a tag. Note that it does not seem you can link to arbitrary text, but you can to section headers.</p>
 </section>
 </section>
@@ -270,7 +277,8 @@ But you can stay immature forever<br>
 <li>0.5 pounds cashews</li>
 </ul></li>
 </ul>
-<p>Notice, the indent level is 4 spaces. You can use a <code>-</code> or a <code>*</code> or a <code>+</code> to start those list items. In fact, you can mix and match them too, as I did, but it is probably better to be consistent. (Use the same symbol within a nested level and different ones between). Hey! did you notice the backticks (upper left of your keyboard— same key as the tilde) around things. Those include inline code-fragments—basically they get printed out in monospaced type (any maybe in a different color). Super useful for variable names like <code>x_data</code> or <code>y_data</code>.</p>
+<p>Notice, the indent level is 4 spaces. You can use a <code>-</code> or a <code>*</code> or a <code>+</code> to start those list items. In fact, you can mix and match them too, as I did, but it is probably better to be consistent. (Use the same symbol within a nested level and different ones between).</p>
+<p>Hey! did you notice the backticks (upper left of your keyboard— same key as the tilde) around things. Those include inline code-fragments—basically they get printed out in monospaced type (any maybe in a different color). Super useful for variable names or functions like <code>x_data</code> or <code>y_data</code>.</p>
 <p>While we are at it, let’s look at what I have done with the text in the .Rmd file (the text file). Note that I have put plenty of line endings in so that there are not big long lines. This is a good habit to get into because git likes to look at differences between files on a line by line basis. If the lines are long, then it is harder for git to reasonably merge changes. Rstudio’s editor will soft-wrap the lines so that it looks like there are line breaks but there really aren’t. Like this ridiculously long line.</p>
 <p>And do keep in mind that a blank line equates to a paragraph break.</p>
 </section>
@@ -339,12 +347,142 @@ M = (20 - \sqrt{T/4}) \times \biggl(\frac{a+5000}{2500}\biggr)^\frac{3}{2}
 <p>And then we print it and it looks like this. (Check out how I hid that code block)</p>
 <div class="cell">
 <div class="cell-output-display">
-
-<div data-pagedtable="false">
-  <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["T"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["a"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["M"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"300","2":"0","3":"32.07365"},{"1":"350","2":"0","3":"30.11103"},{"1":"400","2":"0","3":"28.28427"},{"1":"450","2":"0","3":"26.56854"},{"1":"500","2":"0","3":"24.94577"},{"1":"300","2":"1250","3":"44.82428"},{"1":"350","2":"1250","3":"42.08144"},{"1":"400","2":"1250","3":"39.52847"},{"1":"450","2":"1250","3":"37.13067"},{"1":"500","2":"1250","3":"34.86277"},{"1":"300","2":"2500","3":"58.92305"},{"1":"350","2":"2500","3":"55.31749"},{"1":"400","2":"2500","3":"51.96152"},{"1":"450","2":"2500","3":"48.80953"},{"1":"500","2":"2500","3":"45.82830"},{"1":"300","2":"3750","3":"74.25153"},{"1":"350","2":"3750","3":"69.70801"},{"1":"400","2":"3750","3":"65.47900"},{"1":"450","2":"3750","3":"61.50704"},{"1":"500","2":"3750","3":"57.75026"},{"1":"300","2":"5000","3":"90.71797"},{"1":"350","2":"5000","3":"85.16685"},{"1":"400","2":"5000","3":"80.00000"},{"1":"450","2":"5000","3":"75.14719"},{"1":"500","2":"5000","3":"70.55728"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: right;">T</th>
+<th style="text-align: right;">a</th>
+<th style="text-align: right;">M</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">32.07365</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">30.11103</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">28.28427</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">450</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">26.56854</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">24.94577</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">1250</td>
+<td style="text-align: right;">44.82428</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">1250</td>
+<td style="text-align: right;">42.08144</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">1250</td>
+<td style="text-align: right;">39.52847</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">450</td>
+<td style="text-align: right;">1250</td>
+<td style="text-align: right;">37.13067</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">1250</td>
+<td style="text-align: right;">34.86277</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">2500</td>
+<td style="text-align: right;">58.92305</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">2500</td>
+<td style="text-align: right;">55.31749</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">2500</td>
+<td style="text-align: right;">51.96152</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">450</td>
+<td style="text-align: right;">2500</td>
+<td style="text-align: right;">48.80953</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">2500</td>
+<td style="text-align: right;">45.82830</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">3750</td>
+<td style="text-align: right;">74.25153</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">3750</td>
+<td style="text-align: right;">69.70801</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">3750</td>
+<td style="text-align: right;">65.47900</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">450</td>
+<td style="text-align: right;">3750</td>
+<td style="text-align: right;">61.50704</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">3750</td>
+<td style="text-align: right;">57.75026</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">5000</td>
+<td style="text-align: right;">90.71797</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">5000</td>
+<td style="text-align: right;">85.16685</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">5000</td>
+<td style="text-align: right;">80.00000</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">450</td>
+<td style="text-align: right;">5000</td>
+<td style="text-align: right;">75.14719</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">5000</td>
+<td style="text-align: right;">70.55728</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <p>Cooking times, <span class="math inline">\(M\)</span>, at various temperatures, <span class="math inline">\(T\)</span>, and elevations, <span class="math inline">\(a\)</span>.</p>
