@@ -3,6 +3,7 @@ title: "Grandma's Glop Recipe"
 author: "Eric Anderson"
 editor: source
 bibliography: "./glop.bib"
+csl: molecular-ecology.csl
 format:
   html:
     theme: solar

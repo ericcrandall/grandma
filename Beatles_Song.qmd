@@ -22,6 +22,7 @@ Possessing and caressing me
 *Jai guru deva, om*  
 
 ```{r}
+#| code-fold: true
 for(chorus in 1:4){
 print(paste(
   chorus,"Nothing's gonna change my world"))
@@ -35,6 +36,7 @@ They tumble blindly as they make their way across the universe
 *Jai guru deva, om*  
 
 ```{r}
+#| code-fold: true
 for(chorus in 1:4){
 print(paste(
   chorus,"Nothing's gonna change my world"))
@@ -48,6 +50,7 @@ It calls me on and on across the universe
 *Jai guru deva, om*  
 
 ```{r}
+#| code-fold: true
 for(chorus in 1:4){
 print(paste(
   chorus,"Nothing's gonna change my world"))
@@ -57,7 +60,8 @@ print(paste(
 
 
 ```{r}
-#| echo: false
+#| code-fold: true
+
 for(chorus in 1:6){
 print(paste(chorus,"Jai guru deva"))
 }
