@@ -2,12 +2,7 @@
 title: "Across The Universe"
 output: html_notebook
 author: "John Lennon"
-execute:
-  echo: false
-format:
-  html:
-    code-fold: true
-
+format: html
 ---
 
 ![Across The Universe](https://townsquare.media/site/295/files/2017/05/Beatles.jpg?w=980&q=75)
@@ -17,12 +12,10 @@ format:
 ## From Nothing's Gonna Change Our World
 
 
-When I find myself in times of trouble,
-Mother Mary comes to me.
-Speaking words of wisdom.
-Let it be.
-
-
+Words are flowing out like endless rain into a paper cup
+They slither wildly as they slip away across the universe
+Pools of sorrow, waves of joy are drifting through my opened mind
+Possessing and caressing me
 
 (Chord Chord Chord)
 
@@ -30,7 +23,8 @@ Let it be.
 
 ```{r}
 for(chorus in 1:4){
-print("Nothing's gonna change my world")
+print(paste(
+  chorus,"Nothing's gonna change my world"))
 }
 ```
 
@@ -42,7 +36,8 @@ They tumble blindly as they make their way across the universe
 
 ```{r}
 for(chorus in 1:4){
-print("Nothing's gonna change my world")
+print(paste(
+  chorus,"Nothing's gonna change my world"))
 }
 ```
 
@@ -54,7 +49,8 @@ It calls me on and on across the universe
 
 ```{r}
 for(chorus in 1:4){
-print("Nothing's gonna change my world")
+print(paste(
+  chorus,"Nothing's gonna change my world"))
 }
 ```
 
@@ -63,7 +59,7 @@ print("Nothing's gonna change my world")
 ```{r}
 #| echo: false
 for(chorus in 1:6){
-print("Jai guru deva")
+print(paste(chorus,"Jai guru deva"))
 }
 ```
 
