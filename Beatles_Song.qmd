@@ -25,7 +25,7 @@ Let it be.
 #| code-fold: true
 for(chorus in 1:4){
 print(paste(
-  chorus,"Nothing's gonna change my world"))
+  chorus,"Let It Be"))
 }
 ```
 
