@@ -24,11 +24,8 @@ Strawberry Fields.
 #| code-fold: true
 for(chorus in 1:4){
 print(paste(
-<<<<<<< HEAD
+
   chorus,"Let It Be"))
-=======
-  chorus,"Strawberry Fields Forever"))
->>>>>>> 8c3f1bb32a2bba375bac55e1e66634517ccd9acf
 }
 ```
 
